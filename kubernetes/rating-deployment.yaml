@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: payment-deployment
+  name: rating-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: payment
+      app: rating
   template:
     metadata:
       labels:
-        app: payment
+        app: rating
     spec:
       containers:
-      - name: payment
-        image: doku96522/payment-service:latest
+      - name: rating
+        image: doku96522/rating-service:latest
         ports:
         - containerPort: 3000
         env:

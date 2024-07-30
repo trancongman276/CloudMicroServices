@@ -1,3 +1,5 @@
+CREATE USER normal_user WITH PASSWORD 'normal_password';
+
 CREATE TABLE "room_types" (
   "id" SERIAL PRIMARY KEY,
   "hotel_id" INTEGER NOT NULL,

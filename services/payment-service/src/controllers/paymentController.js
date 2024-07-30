@@ -10,4 +10,13 @@ const pay = async (req, res) => {
   }
 }
 
-module.exports = { pay };
+const getPayments = async (req, res) => {
+  try {
+    const payments = await getPayments();
+    res.status(200).json({ payments });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
+
+module.exports = { pay, getPayments };

@@ -9,4 +9,9 @@ const createPayment = async (payment) => {
   return result.rows[0];
 };
 
+const getPayments = async () => {
+  const result = await pool.query('SELECT * FROM payments');
+  return result.rows;
+};
+
 module.exports = { createPayment };

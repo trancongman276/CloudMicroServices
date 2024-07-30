@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: payment-deployment
+  name: hotel-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: payment
+      app: hotel
   template:
     metadata:
       labels:
-        app: payment
+        app: hotel
     spec:
       containers:
-      - name: payment
-        image: doku96522/payment-service:latest
+      - name: hotel
+        image: doku96522/hotel-service:latest
         ports:
         - containerPort: 3000
         env:
